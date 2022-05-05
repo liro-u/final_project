@@ -1,31 +1,49 @@
 :root{
   --space-between-link: 10px;
+
   --top-padding: 15px;
   --side-padding: 5%;
+
   --basic-color: #fff;
-  --scroll-color: #888;
-  --color-hover: #aaa;
+  --scroll-color: #3F4756;
+
+  --basic-color-hover: #3F4756;
+  --scroll-color-hover: #4B8AD5;
+
+  --scroll-background-color: #fff;
+
   --color-transition-time: 0.2s;
 }
 
+main{
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+}
 .--nav_bar-wrap{
+  transition: background-color var(--color-transition-time) ease-out;
   --active-color: var(--basic-color);
-  position: fixed;
-  left: 0;
-  right: 0;
+  --active-background-color: none;
+  --active-hover-color: var(--basic-color-hover);
   color: var(--active-color);
+  background-color: var(--active-background-color);
+  
+  position: fixed;
+  display: flex;
+  right: 0;
+  left: 0;
   margin: 0;
   padding-top: var(--top-padding);
   padding-bottom: var(--top-padding);
   padding-left: var(--side-padding);
   padding-right: var(--side-padding);
-  display: flex;
 }
 
 html:not([data-scroll='0']) .--nav_bar-wrap{
   --active-color: var(--scroll-color);
-  position: fixed;
-  color: var(--color);
+  --active-background-color: var(--scroll-background-color);
+  --active-hover-color: var(--scroll-color-hover);
 }
 
 .--nav_bar-title, .--nav_bar-box{
@@ -34,6 +52,7 @@ html:not([data-scroll='0']) .--nav_bar-wrap{
 }
 
 .--nav_bar-title{
+  transition: color var(--color-transition-time) ease-out;
   margin-left: 0;
   margin-right: auto;
 }
@@ -57,5 +76,5 @@ html:not([data-scroll='0']) .--nav_bar-wrap{
   text-decoration: none;
 }
 .--nav_bar-link:hover{
-  color: var(--color-hover);
+  color: var(--active-hover-color);
 }

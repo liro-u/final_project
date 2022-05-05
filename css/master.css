@@ -1,6 +1,14 @@
 body{
   margin: 0;
-  height: 200vh;
+  height: 120vh;
   background: rgb(0,99,167);
   background: linear-gradient(135deg, rgba(0,99,167,1) 7%, rgba(75,138,213,1) 49%, rgba(163,188,212,1) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.div_exemple{
+  padding-bottom: 2vh;
+  color: white;
+  font-size: xx-large;
 }
