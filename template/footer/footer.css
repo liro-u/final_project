@@ -1,0 +1,57 @@
+:root{
+  --footer-space-between-link: 10px;
+  --footer-space-between-box: 30px;
+
+  --footer-top-padding: 15px;
+  --footer-side-padding: 5%;
+
+  --footer-background-color: #fff;
+
+  --footer-basic-color: #000;
+  --footer-hover-link-color: red;
+
+  --footer-color-transition-time: 0.2s;
+}
+
+.--footer-wrap{
+  background-color: var(--footer-background-color);
+  color: var(--footer-basic-color);
+
+  text-align: center;
+  font-size: small;
+
+  margin: 0;
+  padding-top: var(--footer-top-padding);
+  padding-bottom: var(--footer-top-padding);
+  padding-left: var(--footer-side-padding);
+  padding-right: var(--footer-side-padding);
+}
+
+.--footer-link-box, .--footer-logo-box, .--footer-cp{
+  padding-top: var(--footer-space-between-box);
+}
+
+.--footer-li{
+  list-style-type: none;
+  display: inline;
+  margin-left: var(--footer-space-between-link);
+  margin-right: var(--footer-space-between-link);
+}
+
+.--footer-link{
+  position: relative;
+  color: inherit;
+  transition: color var(--footer-color-transition-time) ease-out;
+  text-decoration: none;
+}
+.--footer-link:hover{
+  color: var(--footer-hover-link-color);
+}
+
+.--footer-logo{
+  height: 50px;
+}
+
+.--footer-main-logo{
+  height: 100px;
+}

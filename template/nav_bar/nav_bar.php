@@ -41,7 +41,6 @@ function add_menu_from_csv($path_csv = "", $title = ""){
 
   add_menu($list, $link, $title);
 }
-
-#chercher les infos du menu dans le csvcorrespondant a la page (etudiant / admin / administration)
-#ajouter le menu a la page et lier le css du menu a la page
+//ajouter un margin au parent (de la taille de la nav bar)
  ?>
+
