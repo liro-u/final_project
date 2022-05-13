@@ -1,0 +1,222 @@
+:root{
+  /*ajouter des variable
+  separer les css (pas obligatoir a faire juste si c'est vraiment utile dans l'organisation du projet*/
+}
+
+body{
+  background: linear-gradient( rgba(0,99,167,1) 7%, rgba(75,138,213,1) 49%, rgba(163,188,212,1) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow-y: hidden; 
+}
+
+/*--HEADER--*/
+.--conv-header{
+  color: #fff;
+  z-index: 999;
+  background-color: rgb(0,99,167);
+  box-shadow: 0px 3px 3px rgb(0, 63, 95);
+  padding: 10px;
+  position: fixed;
+  display: flex;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.--conv-return{
+  width: 24px;
+  height: 24px;
+  transform: scaleX(-1);
+  filter: invert(1);
+}
+
+.--conv-link-return, .--conv-profil-picture, .--conv-name-labbel, .--conv-i-img{
+  display: inline;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.--conv-profil-picture{
+  width: 36px;
+  height: 36px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.--conv-name-labbel{
+  font-size: large;
+}
+.--conv-i-img{
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+}
+
+/*--CONVERSATION--*/
+.--conv-message-container{
+  overflow-y: scroll;
+  height: calc(100vh - 129px);
+  margin-top: 58px;
+  margin-bottom: 70px;
+  color: #fff;
+}
+
+.--conv-wrap-part-conv{
+  left: 0;
+  right: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.--conv-message-button{
+  display: none;
+  width: 24px;
+  height: 24px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.--conv-wrap-part-conv:hover>.--conv-message-button{
+  display: inline;
+}
+
+.--conv-self-wrap-part-conv{
+  display: flex;
+  justify-content: right;
+}
+
+.--conv-wrap-message{
+  background-color: rgb(0, 22, 41);
+  border-radius: 15px;
+  max-width: 70%;
+  display: inline-block;
+}
+
+.--conv-self-message{
+  background-color: rgb(0, 67, 112);
+}
+
+.--conv-message{
+  font-size: medium;
+  padding: 20px;
+  margin: 0;
+  word-break: keep-all;
+}
+
+/*--FOOTER--*/
+.--conv-footer{
+  background-color: rgba(163,188,212,1);
+  box-shadow: 0px -3px 3px #333;
+  position: fixed;
+  display: flex;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 15px;
+  justify-content: center;
+}
+
+.--conv-wrap-icon{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.--conv-icon-footer{
+  width: 36px;
+  height: 36px;
+  margin-right: 20px;
+}
+
+.--conv-text-input{
+  border-radius: 15px;
+  border: solid #333 2px;
+  max-width: 70%;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.--conv-input-text{
+  margin-left: 10px;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: large;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.--conv-send-icon{
+  width: 36px;
+  height: 36px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.--conv-icon-footer, .--conv-send-icon, .--conv-return, .--conv-i-img, .--conv-message-button{
+  transition: filter 0.2s ease-out;
+}
+
+.--conv-icon-footer:hover, .--conv-send-icon:hover, .--conv-return:hover{
+  filter: invert(0.2);
+}
+
+.--conv-i-img:hover, .--conv-message-button:hover{
+  filter: invert(0.8);
+}
+
+@media (max-aspect-ratio: 1/1){
+  .--conv-header{
+    padding: 30px;
+  }
+  
+  .--conv-return{
+    width: 50px;
+    height: 50px;
+  }
+  
+  .--conv-profil-picture{
+    width: 100px;
+    height: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .--conv-i-img{
+    width: 85px;
+    height: 85px;
+  }
+
+  .--conv-name-labbel{
+    font-size: 300%;
+  }
+
+  .--conv-message-container{
+    height: calc(100vh - 280px);
+    margin-top: 160px;
+    margin-bottom: 120px;
+  }
+
+  .--conv-message{
+    font-size: xx-large;
+  }
+
+  .--conv-icon-footer, .--conv-send-icon{
+    width: 85px;
+    height: 85px;
+  }
+
+  .--conv-text-input{
+    max-width: 100%;
+    width: 700px;
+  }
+
+  .--conv-input-text{
+    font-size: 250%;
+  }
+}
