@@ -15,6 +15,7 @@ function add_menu($list = [], $link = [], $title=""){
     echo "<li class='--nav_bar-li'><a class='--nav_bar-link' href='$link[$key]'>$value</a></li>";
   }
   echo "</ul>";
+  echo "<img class='--nav_bar-wrap-profile-picture' src='".$_SESSION['profile_picture']."' alt='ici'></img>";
 
   echo "</div>";
 }
@@ -43,4 +44,3 @@ function add_menu_from_csv($path_csv = "", $title = ""){
 }
 //ajouter un margin au parent (de la taille de la nav bar)
  ?>
-

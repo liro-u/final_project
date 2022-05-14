@@ -1,11 +1,12 @@
 :root{
   --nav_bar-space-between-link: 10px;
+  --nav_bar-space-between-box: 15px;
 
   --nav_bar-top-padding: 15px;
   --nav_bar-side-padding: 5%;
 
   --nav_bar-basic-color: #fff;
-  --scroll-color: #3F4756;
+  --nav_bar-scroll-color: #3F4756;
 
   --nav_bar-basic-color-hover: #3F4756;
   --nav_bar-scroll-color-hover: #4B8AD5;
@@ -25,11 +26,12 @@ main{
 .--nav_bar-wrap{
   transition: background-color var(--nav_bar-color-transition-time) ease-out;
   --nav_bar-active-color: var(--nav_bar-basic-color);
+  --nav_bar-invert-active-color-hover: var(--nav_bar-basic-color-hover);
   --nav_bar-active-background-color: none;
   --nav_bar-active-hover-color: var(--nav_bar-basic-color-hover);
   color: var(--nav_bar-active-color);
   background-color: var(--nav_bar-active-background-color);
-  
+
   position: fixed;
   display: flex;
   right: 0;
@@ -43,6 +45,7 @@ main{
 
 html:not([data-scroll='0']) .--nav_bar-wrap{
   --nav_bar-active-color: var(--nav_bar-scroll-color);
+  --nav_bar-invert-active-color-hover: var(--nav_bar-scroll-color-hover);
   --nav_bar-active-background-color: var(--nav_bar-scroll-background-color);
   --nav_bar-active-hover-color: var(--nav_bar-scroll-color-hover);
 }
@@ -59,6 +62,7 @@ html:not([data-scroll='0']) .--nav_bar-wrap{
 }
 
 .--nav_bar-box{
+  padding-left: 0;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -78,4 +82,43 @@ html:not([data-scroll='0']) .--nav_bar-wrap{
 }
 .--nav_bar-link:hover{
   color: var(--nav_bar-active-hover-color);
+}
+
+.--nav_bar-wrap-profile-picture{
+  width: 50px;
+  height: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 100%;
+  margin-left: 10px;
+  border-color: var(--nav_bar-active-color);
+  border: 2px solid;
+  transition: border-color var(--nav_bar-color-transition-time) ease-out;
+}
+
+.--nav_bar-wrap-profile-picture:hover{
+  border-color: var(--nav_bar-invert-active-color-hover);
+}
+
+@media (max-aspect-ratio: 1/1){
+  .--nav_bar-title, .--nav_bar-box{
+    display: block;
+  }
+
+  .--nav_bar-title{
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .--nav_bar-box{
+    padding-left: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .--nav_bar-li{
+    display: block;
+    margin-top: var(--nav_bar-space-between-box);
+    margin-bottom: var(--nav_bar-space-between-box);
+  }
 }

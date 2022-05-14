@@ -8,7 +8,7 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
-  overflow-y: hidden; 
+  overflow-y: hidden;
 }
 
 /*--HEADER--*/
@@ -70,6 +70,10 @@ body{
   margin-bottom: 15px;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.--conv-info-text{
+  text-align: center;
 }
 
 .--conv-message-button{
@@ -174,12 +178,12 @@ body{
   .--conv-header{
     padding: 30px;
   }
-  
+
   .--conv-return{
     width: 50px;
     height: 50px;
   }
-  
+
   .--conv-profil-picture{
     width: 100px;
     height: 100px;

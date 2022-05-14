@@ -1,8 +1,8 @@
 :root{
   --footer-space-between-link: 10px;
-  --footer-space-between-box: 30px;
+  --footer-space-between-box: 15px;
 
-  --footer-top-padding: 15px;
+  --footer-top-padding: 35px;
   --footer-side-padding: 5%;
 
   --footer-background-color: #fff;
@@ -25,6 +25,10 @@
   padding-bottom: var(--footer-top-padding);
   padding-left: var(--footer-side-padding);
   padding-right: var(--footer-side-padding);
+}
+
+.--footer-link-box, .--footer-logo-box{
+    padding-left: 0;
 }
 
 .--footer-link-box, .--footer-logo-box, .--footer-cp{
@@ -53,5 +57,13 @@
 }
 
 .--footer-main-logo{
-  height: 100px;
+  height: 36px;
+}
+
+@media (max-aspect-ratio: 1/1){
+  .--footer-li{
+    display: block;
+    margin-top: var(--footer-space-between-box);
+    margin-bottom: var(--footer-space-between-box);
+  }
 }
