@@ -20,25 +20,32 @@ function is_just_space($word){
 }
 
 function password_is_ok($password){
-  if (! is_just_space($password)){
+  if (is_just_space($password)){
+    return false;
+  }
+  return true;
+}
+
+function pseudo_is_ok($pseudo){
+  if (is_just_space($pseudo)){
+    return false;
+  }
+  return true;
+}
+
+function pseudo_exist($pseudo, $csv_path_list, $csv_path, $tab = []){
+  if (exist_in_collum_name("pseudo", $pseudo, $csv_path_list)){
+    return true;
+  }elseif (exist_in_collum_name_array("pseudo",$pseudo, $csv_path, $tab)){
     return true;
   }
   return false;
 }
 
-function pseudo_is_ok($pseudo, $csv_path, $idx){
-  if (! is_just_space($pseudo)){
-    if (! exist_in_collum_name_before_idx("pseudo", $pseudo, $csv_path, $idx)){
-      return true;
-    }
-  }
-  return false;
-}
-
-function create_pseudo($nom, $prenom, $csv_path, $idx){
+function create_pseudo($nom, $prenom, $csv_path_list, $csv_path, $tab = []){
   $pseudo = $nom . "." . $prenom;
   $c = 0;
-  while (! pseudo_is_ok($pseudo, $csv_path, $idx)){
+  while (pseudo_exist($pseudo, $csv_path_list, $csv_path, $tab)){
     $pseudo = $nom . "." . $prenom . $c;
     $c++;
   };
@@ -55,7 +62,8 @@ function setup_first_line_param($csv_path, $param, $tab, $bonus = 0){
   return [$tab, $index];
 }
 
-function init_password($csv_path, $profile_picture_path){
+function init_password($csv_path, $csv_path_list, $profile_picture_path){
+  $csv_path_list[] = $csv_path;
   $content_csv = get_content_in_array($csv_path);
 
   //setup first_line and index constant
@@ -89,8 +97,8 @@ function init_password($csv_path, $profile_picture_path){
     if (! password_is_ok($row[$index_password])){
       $content_csv[$key + 1][$index_password] = create_random_password();
     }
-    if (! pseudo_is_ok($row[$index_pseudo], $csv_path, $key)){
-      $content_csv[$key + 1][$index_pseudo] = create_pseudo($row[$index_prenom], $row[$index_nom], $csv_path, $key);
+    if (! pseudo_is_ok($row[$index_pseudo])){
+      $content_csv[$key + 1][$index_pseudo] = create_pseudo($row[$index_prenom], $row[$index_nom], $csv_path_list, $csv_path, $content_csv);
     }
     if (is_just_space($row[$index_profile_picture])){
       $content_csv[$key + 1][$index_profile_picture] = get_random_row($profile_picture_path)[0];

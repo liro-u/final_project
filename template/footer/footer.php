@@ -25,7 +25,7 @@ function add_footer($list = [], $link = [], $logo = [], $logo_link = [], $main_l
 }
 
 function add_default_footer(){
-    add_footer(["politique de confidentialité", "Accord utilisateur", "Qui sommes-nous ?", "Contact", "ton autre gros cul"],["","","","",""],["https://cytech.cyu.fr/images/logo.png", "https://www.cti-commission.fr/wp-content/uploads/2016/01/cti-logo-cmjn.png"],["", ""],"https://upload.wikimedia.org/wikipedia/commons/4/4a/CY_Tech.png","");
+    add_footer(["politique de confidentialité", "Accord utilisateur", "Qui sommes-nous ?", "Contact"],["","","",""],["https://cytech.cyu.fr/images/logo.png", "https://www.cti-commission.fr/wp-content/uploads/2016/01/cti-logo-cmjn.png"],["", ""],"https://upload.wikimedia.org/wikipedia/commons/4/4a/CY_Tech.png","");
 }
 
 //faire en sorte que le footer colle au bas de la page meme quand il n'y a rien dedans

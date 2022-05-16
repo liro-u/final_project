@@ -1,0 +1,27 @@
+.--grid-table{
+  border-collapse: collapse;
+  font-size: small;
+}
+
+.--grid-title, .--grid-case {
+  border: solid 2px #fff;
+  padding: 5px;
+  max-width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.--grid-icon{
+  width: 18px;
+  filter: invert(1);
+  transition: filter 0.2s ease-out;
+}
+
+.--grid-icon:hover{
+  filter: invert(0);
+}
+
+.--grid-case-no-border{
+  border: none;
+}

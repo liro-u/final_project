@@ -5,8 +5,10 @@
     <title>test</title>
     <?php
     session_start();
+    include "function/csv.php";
     include "template/nav_bar/nav_bar.php";
     include "template/footer/footer.php";
+    include "template/grid/grid_func.php";
     ?>
     <link rel="stylesheet" href="css/master.css">
   </head>

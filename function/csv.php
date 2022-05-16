@@ -65,12 +65,21 @@ function match_tab_row_size($tab){
   return $tab;
 }
 
-function exist_in_collum_name_before_idx($name, $research, $csv_path, $index){
-  $tab = get_content_in_array($csv_path);
+function exist_in_collum_name($name, $research, $csv_path_list){
+  foreach($csv_path_list as $k => $csv_path){
+    $tab = get_content_in_array($csv_path);
+    if (exist_in_collum_name_array($name, $research, $csv_path, $tab)){
+      return true;
+    }
+  }
+  return false;
+}
+
+function exist_in_collum_name_array($name, $research, $csv_path, $tab){
   $idx = get_collum_by_name($csv_path, $name);
-  array_shift($tab);
-  foreach($tab as $k => $row){
-    if ($k < $index){
+  if ($idx != -1){
+    array_shift($tab);
+    foreach($tab as $key => $row){
       if ($row[$idx] == $research){
         return true;
       }
@@ -104,5 +113,11 @@ function search_in_file_at_same_line($csv_path, $param_list, $idx_name_list){
     fclose($handle);
   }
   return NULL;
+}
+
+function remove_line($csv_path, $line){
+  $tab = get_content_in_array($csv_path);
+  unset($tab[$line]);
+  replace_csv_by_array($csv_path, $tab);
 }
  ?>

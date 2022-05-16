@@ -1,3 +1,3 @@
 <?php
-header('location: test.php');
+header('location: content/connexion/connexion.php');
  ?>
