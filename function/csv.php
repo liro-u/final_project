@@ -120,4 +120,15 @@ function remove_line($csv_path, $line){
   unset($tab[$line]);
   replace_csv_by_array($csv_path, $tab);
 }
+function search_pseudo_line($csv_path, $pseudo){
+  $idx_pseudo = get_collum_by_name($csv_path, "pseudo");
+  $tab = get_content_in_array($csv_path);
+  foreach($tab as $k => $row){
+    if ($row[$idx_pseudo] == $pseudo){
+      return $row;
+    }
+  }
+  return [];
+}
  ?>
+

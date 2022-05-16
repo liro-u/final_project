@@ -18,6 +18,7 @@ body{
   background-color: rgb(0,99,167);
   box-shadow: 0px 3px 3px rgb(0, 63, 95);
   padding: 10px;
+  min-height: 38px;
   position: fixed;
   display: flex;
   left: 0;
@@ -30,19 +31,13 @@ body{
   height: 24px;
   transform: scaleX(-1);
   filter: invert(1);
+  margin-right: 15px;
 }
 
 .--conv-link-return, .--conv-profil-picture, .--conv-name-labbel, .--conv-i-img{
   display: inline;
   margin-top: auto;
   margin-bottom: auto;
-}
-
-.--conv-profil-picture{
-  width: 36px;
-  height: 36px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .--conv-name-labbel{
@@ -76,6 +71,12 @@ body{
   text-align: center;
 }
 
+.--conv-join-info{
+  background-color: rgba(51, 51, 51, 0.2);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .--conv-message-button{
   display: none;
   width: 24px;
@@ -95,6 +96,14 @@ body{
   justify-content: right;
 }
 
+.--conv-profile-picture{
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  padding-right: 0px;
+  display: inline-block;
+}
+
 .--conv-wrap-message{
   background-color: rgb(0, 22, 41);
   border-radius: 15px;
@@ -102,15 +111,34 @@ body{
   display: inline-block;
 }
 
+.--conv-message-pseudo{
+  vertical-align: middle;
+  margin-top: 0px;
+  display: inline-block;
+  padding-left: 15px;
+  font-size: x-small;
+  color: #888;
+}
+
 .--conv-self-message{
   background-color: rgb(0, 67, 112);
+  padding-top: 20px;
 }
 
 .--conv-message{
   font-size: medium;
   padding: 20px;
+  padding-top: 0px;
   margin: 0;
-  word-break: keep-all;
+  word-break: break-all;
+}
+
+.--conv-message-img{
+  display: block;
+  margin: 5px;
+  border-radius: 10px;
+  max-width: 900px;
+  max-height: 400px;
 }
 
 /*--FOOTER--*/
@@ -172,6 +200,18 @@ body{
 
 .--conv-i-img:hover, .--conv-message-button:hover{
   filter: invert(0.8);
+}
+
+.--conv-message-img{
+  color: orange;
+}
+
+.--conv-active-galerie-mode{
+  filter: invert(45%) sepia(99%) saturate(3519%) hue-rotate(84deg) brightness(96%) contrast(98%);
+}
+
+.--conv-active-galerie-mode:hover{
+  filter: invert(18%) sepia(20%) saturate(5816%) hue-rotate(181deg) brightness(99%) contrast(103%);
 }
 
 @media (max-aspect-ratio: 1/1){

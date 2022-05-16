@@ -100,6 +100,32 @@ html:not([data-scroll='0']) .--nav_bar-wrap{
   border-color: var(--nav_bar-invert-active-color-hover);
 }
 
+.--nav_bar-link-message{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.--nav_bar-icon-message{
+  width: 40px;
+  height: 40px;
+  filter: invert(1);
+  transition: filter 0.2s ease-out;
+}
+
+.--nav_bar-icon-message:hover{
+  filter: invert(0.2)
+}
+
+html:not([data-scroll='0']) .--nav_bar-icon-message{
+  filter: invert(0.2);
+}
+
+html:not([data-scroll='0']) .--nav_bar-icon-message:hover{
+  filter: invert(53%) sepia(79%) saturate(1246%) hue-rotate(189deg) brightness(86%) contrast(93%);
+}
+
 @media (max-aspect-ratio: 1/1){
   .--nav_bar-title, .--nav_bar-box{
     display: block;
