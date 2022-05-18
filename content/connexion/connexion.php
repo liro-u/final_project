@@ -35,7 +35,9 @@
         <?php
         if(isset($_GET['error'])){
             if($_GET['error'] == "wrong_mdp"){
-                echo "<p style='text-align:center;color:red'>Username or password is not correct</p>";
+                echo "<p style='text-align:center;color:red'>pseudo ou mot de passe incorrecte</p>";
+            }elseif ($_GET["error"] == "connexion_failed") {
+              echo "<p style='text-align:center;color:red'>la connexion a la page précédente a echoué</p>";
             }
         }
         ?>

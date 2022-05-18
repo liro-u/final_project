@@ -5,6 +5,7 @@
     <title>test</title>
     <?php
     session_start();
+    include "content/connexion/verif_is_connected.php";
     include "function/csv.php";
     include "template/nav_bar/nav_bar.php";
     include "template/footer/footer.php";

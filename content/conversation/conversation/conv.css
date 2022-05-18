@@ -59,16 +59,21 @@ body{
 }
 
 .--conv-wrap-part-conv{
-  left: 0;
-  right: 0;
   margin-top: 15px;
   margin-bottom: 15px;
   padding-left: 15px;
   padding-right: 15px;
+  display: flex;
+  justify-content: left;
+}
+
+.--conv-self-wrap-part-conv{
+  justify-content: right;
 }
 
 .--conv-info-text{
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .--conv-join-info{
@@ -88,12 +93,7 @@ body{
 }
 
 .--conv-wrap-part-conv:hover>.--conv-message-button{
-  display: inline;
-}
-
-.--conv-self-wrap-part-conv{
-  display: flex;
-  justify-content: right;
+  display: inline-block;
 }
 
 .--conv-profile-picture{

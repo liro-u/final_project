@@ -2,8 +2,12 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    
+
     <title>test</title>
+      <?php
+      session_start();
+      include "../../content/connexion/verif_is_connected.php";
+     ?>
   </head>
   <body>
       <?php

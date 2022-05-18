@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="../../css/master.css">
   <?php
   session_start();
+  include "../../content/connexion/verif_is_connected.php";
   include "grid_func.php";
   include "../../function/csv.php";
   include "../footer/footer.php";

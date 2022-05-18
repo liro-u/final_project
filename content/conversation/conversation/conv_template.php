@@ -5,6 +5,8 @@
   <link rel="stylesheet" href="../../../css/master.css">
   <link rel="stylesheet" href="conv.css">
   <?php
+  session_start();
+  include "../../../content/connexion/verif_is_connected.php";
   include "conv_php/conv_func.php";
    ?>
   <script src="conversation.js" defer></script>

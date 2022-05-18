@@ -11,14 +11,18 @@ function ask_delete_line(obj, line, func_path){
       if (this.readyState == 4 && this.status == 200){
         if (this.responseText == 1){
           root = obj.parentNode.parentNode
+          table = root.parentNode
+          csv_path = table.dataset.csvpath
+          edit_path = table.dataset.edit
+          del_path = table.dataset.del
           obj.parentNode.parentNode.removeChild(obj.parentNode)
           children = Array.prototype.slice.call(root.children)
           children.pop()
           children.shift()
           for (let i = 0; i < children.length; i++){
             delete_node = Array.prototype.slice.call(children[i].children).pop()
-            console.log(delete_node)
-            delete_node.dataset.onclick = "ask_delete_line(this, " + i + ", " + func_path + ")"
+            delete_node.setAttribute('onclick', "ask_delete_line(this, " + i + ", " + func_path + ")");
+            delete_node.previousElementSibling.setAttribute('onclick', "edit_line(this, " + '"' + csv_path + '"' + ", " + i + ", " + '"' + edit_path + '"' + ")");
           }
         }else{
           alert('erreur lors de la suppression de la ligne\nCela peut etre liée a votre rang utilisateur ou a une erreur de communication avec le serveur')
@@ -141,7 +145,6 @@ function create_row(obj){
   first_line = last_line.parentNode.children.item(0)
   line = last_line.parentNode.children.length - 2
   nb_collum = Array.prototype.slice.call(first_line.children).length
-  console.log()
   for(let i = 0; i < nb_collum; i++){
     new_line.innerHTML += "<td class='--grid-case'></td>"
   }
