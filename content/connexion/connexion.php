@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="project.css"/>
+    <link rel="stylesheet" href="../../css/master.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
@@ -23,8 +24,10 @@
                 <div class="text-right">
                     <a href="#">Forgot password?</a>
                 </div>
-                <input type="submit" class="button login_submit" value="Log In">
-                <i class="button_icon fas fa-chevron-right"></i>
+                <button type="submit" class="button login_submit" value="Log In">
+                    Log In
+                    <i class="button_icon fas fa-chevron-right"></i>
+                </button>
             </form>
 
 
@@ -32,7 +35,7 @@
         <?php
         if(isset($_GET['error'])){
             if($_GET['error'] == "wrong_mdp"){
-                echo "<p style='color:red'>Username or password is not correct</p>";
+                echo "<p style='text-align:center;color:red'>Username or password is not correct</p>";
             }
         }
         ?>

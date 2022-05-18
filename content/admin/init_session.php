@@ -2,7 +2,7 @@
 include "../../function/csv.php";
 
 function create_random_password($longueur = 6){
- $caracteres = '@!-_&0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+ $caracteres = '@!-_0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
  $longueurMax = strlen($caracteres);
  $chaineAleatoire = '';
  for ($i = 0; $i < $longueur; $i++)
@@ -62,7 +62,7 @@ function setup_first_line_param($csv_path, $param, $tab, $bonus = 0){
   return [$tab, $index];
 }
 
-function init_password($csv_path, $csv_path_list, $profile_picture_path){
+function init_session($csv_path, $csv_path_list, $profile_picture_path){
   $csv_path_list[] = $csv_path;
   $content_csv = get_content_in_array($csv_path);
 
@@ -83,13 +83,13 @@ function init_password($csv_path, $csv_path_list, $profile_picture_path){
   $content_csv = $res[0];
   $res = setup_first_line_param($csv_path, "adress", $content_csv, 4);
   $content_csv = $res[0];
-  
+
   //fill tab with nothing to match them size
   $content_csv = match_tab_row_size($content_csv);
-  
+
   //update first_line and same size in file
   replace_csv_by_array($csv_path, $content_csv);
-  
+
   //fill tab with correct missing value
   $copy_content_csv = $content_csv;
   array_shift($copy_content_csv);
@@ -97,7 +97,7 @@ function init_password($csv_path, $csv_path_list, $profile_picture_path){
     if (! password_is_ok($row[$index_password])){
       $content_csv[$key + 1][$index_password] = create_random_password();
     }
-    if (! pseudo_is_ok($row[$index_pseudo])){
+    if ((! pseudo_is_ok($row[$index_pseudo])) and $index_prenom != -1 and $index_nom != -1){
       $content_csv[$key + 1][$index_pseudo] = create_pseudo($row[$index_prenom], $row[$index_nom], $csv_path_list, $csv_path, $content_csv);
     }
     if (is_just_space($row[$index_profile_picture])){
@@ -108,6 +108,4 @@ function init_password($csv_path, $csv_path_list, $profile_picture_path){
   //replace last csv file by new tab
   replace_csv_by_array($csv_path, $content_csv);
 }
-
-
 ?>

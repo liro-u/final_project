@@ -22,8 +22,8 @@ function toggle_galerie_mode(obj){
 
 function send_message(){
   var new_message = input_message_text.value
-  if ((new_message.replaceAll(' ', '').replaceAll(';', '')) != ""){
-    new_message = new_message.replaceAll(';', '')
+  if (new_message.replaceAll(' ', '') != ""){
+    new_message = (new_message.replaceAll('&amp;', 'et')).replaceAll(';', ',')
     var conv_data_path = "../../../../data/conversation.csv"
     if (galerie_mode){
       content_type = "img"
@@ -35,7 +35,6 @@ function send_message(){
       if (this.readyState == 4 && this.status == 200){
         input_message_text.value = ""
         data = JSON.parse(this.responseText)
-        console.log(data[0])
         create_message(new_message, true, content_type, data[0], data[1])
       }
     }

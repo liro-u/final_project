@@ -17,13 +17,14 @@
 }
 
 main{
-  padding-left: 15vw;
-  padding-right: 10vw;
+  margin-left: 15vw;
+  margin-right: 10vw;
   padding-top: 100px;
   padding-bottom: 5vh;
 }
 
 .--nav_bar-wrap{
+  z-index: 999;
   transition: background-color var(--nav_bar-color-transition-time) ease-out;
   --nav_bar-active-color: var(--nav_bar-basic-color);
   --nav_bar-invert-active-color-hover: var(--nav_bar-basic-color-hover);

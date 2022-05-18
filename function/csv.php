@@ -43,10 +43,18 @@ function add_row_from_array($csv_path, $data){
   }
 }
 
+function add_row($csv_path){
+  $size = getSizeFirstLine($csv_path);
+  for ($i = 0; $i < $size; $i++){
+    $tab[] = "";
+  }
+  add_row_from_array($csv_path, $tab);
+}
+
 function replace_csv_by_array($csv_path, $tab){
   if (($handle = fopen($csv_path, "w+")) !== FALSE) {
     foreach ($tab as $data) {
-        fputcsv($handle, $data, ";");       
+        fputcsv($handle, $data, ";");
     }
     fclose($handle);
   }
@@ -131,4 +139,3 @@ function search_pseudo_line($csv_path, $pseudo){
   return [];
 }
  ?>
-

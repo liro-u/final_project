@@ -12,11 +12,6 @@ a {
     color: black;
 }
 
-body {
-    background: rgb(0,99,167);
-    background: linear-gradient(135deg, rgba(0,99,167,1) 7%, rgba(75,138,213,1) 49%, rgba(163,188,212,1) 100%);
-}
-
 .container {
     display: flex;
     align-items: center;
@@ -129,7 +124,7 @@ body {
 .button_icon {
     font-size: 24px;
     margin-left: auto;
-    color: rgb(120, 117, 181);
+    color: rgba(120, 117, 181, 0.11);
 }
 
 .login_submit {

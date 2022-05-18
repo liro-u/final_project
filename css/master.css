@@ -7,6 +7,10 @@ body{
   background-attachment: fixed;
 }
 
+main{
+  width: auto;
+}
+
 .div_exemple{
   padding-bottom: 2vh;
   color: white;

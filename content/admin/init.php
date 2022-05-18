@@ -12,10 +12,10 @@
       $csv_administration = "../../data/administration/data.csv";
       $csv_admin = "../../data/admin/data.csv";
       $csv_profile_picture = "../../data/admin/asset/profile_picture.csv";
-      init_password($csv_etudiant, [$csv_administration, $csv_admin], $csv_profile_picture);
-      init_password($csv_admin, [$csv_administration, $csv_etudiant], $csv_profile_picture);
-      init_password($csv_administration, [$csv_etudiant, $csv_admin], $csv_profile_picture);
-      ?>
-
+      init_session($csv_etudiant, [$csv_administration, $csv_admin], $csv_profile_picture);
+      init_session($csv_admin, [$csv_administration, $csv_etudiant], $csv_profile_picture);
+      init_session($csv_administration, [$csv_etudiant, $csv_admin], $csv_profile_picture);
+      header('location: ../../index.php');
+       ?>
   </body>
 </html>

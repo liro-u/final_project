@@ -1,12 +1,27 @@
+.--grid-wrap{
+  box-shadow: -5px -5px 5px #fff, 5px 5px 5px #fff, 5px -5px 5px #fff, -5px 5px 5px #fff;
+  border-radius: 25px;
+  height: 80vh;
+  overflow: scroll;
+  padding: 5px;
+}
+
+.--grid-h2{
+  padding-left: 15px;
+  text-align: center;
+}
+
 .--grid-table{
   border-collapse: collapse;
   font-size: small;
+  margin: auto;
+  margin-bottom: 30px;
 }
 
 .--grid-title, .--grid-case {
   border: solid 2px #fff;
   padding: 5px;
-  max-width: 100px;
+  max-width: 150px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -24,4 +39,11 @@
 
 .--grid-case-no-border{
   border: none;
+}
+
+.--grid-input-text{
+  border: solid 1px #fff;
+  color: #fff;
+  width: calc(100% - 10px);
+  background-color: rgba(0,0,0,0);
 }
