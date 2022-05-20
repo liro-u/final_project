@@ -1,8 +1,8 @@
 <?php
 session_start();
 if (isset($_SESSION['type_user'])){
-  header('location: test.php');
+  header("Location: test.php");
   exit;
 }
-header('location: content/connexion/connexion.php?error=connexion_failed');
+header('Location: content/connexion/connexion.php?error=connexion_failed');
  ?>

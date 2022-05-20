@@ -2,7 +2,9 @@
 include "../../../function/csv.php";
 $csv_path_admin = "../../../data/admin/data.csv";
 $csv_path_administration = "../../../data/administration/data.csv";
-$csv_path_etudiant = "../../../data/etudiant/data.csv";
+$csv_path_etudiant1 = "../../../data/etudiant/choixEtudiantsParcours1.csv";
+$csv_path_etudiant2 = "../../../data/etudiant/choixEtudiantsParcours2.csv";
+$csv_path_etudiant3 = "../../../data/etudiant/choixEtudiantsParcours3.csv";
 $home_adress = "../../../test.php";
 $connexion_adress = "../connexion.php";
 
@@ -17,21 +19,25 @@ if ($line = search_in_file_at_same_line($csv_path_admin, [$post_password, $post_
 }elseif ($line = search_in_file_at_same_line($csv_path_administration, [$post_password, $post_login], ["password", "pseudo"])){
   $_SESSION['type_user'] = "administration";
   create_basic_session($csv_path_administration, $line);
-}elseif ($line = search_in_file_at_same_line($csv_path_etudiant, [$post_password, $post_login], ["password", "pseudo"])){
-  $_SESSION['type_user'] = "etudiant";
-  create_basic_session($csv_path_etudiant, $line);
+}else{
+  foreach ([$csv_path_etudiant1, $csv_path_etudiant2, $csv_path_etudiant3] as $key => $csv_path_etudiant) {
+    if ($temp_line = search_in_file_at_same_line($csv_path_etudiant, [$post_password, $post_login], ["password", "pseudo"])){
+      $line = $temp_line;
+      $_SESSION['type_user'] = "etudiant";
+      create_basic_session($csv_path_etudiant, $line);
+    }
+  }
 }
 if ($line){
   $_SESSION['pseudo'] = $post_login;
   $_SESSION['password'] = $post_password;
-  header("location: ".$home_adress);
+  header("Location: ".$home_adress);
   exit();
 }else{
-  header("location: ".$connexion_adress."?error=wrong_mdp");
+  header("Location: ".$connexion_adress."?error=wrong_mdp");
 }
 
 function create_basic_session($csv_path, $line){
   $_SESSION['profile_picture'] = $line[get_collum_by_name($csv_path, "profile picture")];
 }
 ?>
-

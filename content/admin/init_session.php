@@ -83,6 +83,9 @@ function init_session($csv_path, $csv_path_list, $profile_picture_path){
   $content_csv = $res[0];
   $res = setup_first_line_param($csv_path, "adress", $content_csv, 4);
   $content_csv = $res[0];
+  $res = setup_first_line_param($csv_path, "attributed option", $content_csv, 5);
+  $content_csv = $res[0];
+
 
   //fill tab with nothing to match them size
   $content_csv = match_tab_row_size($content_csv);

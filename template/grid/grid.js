@@ -21,7 +21,7 @@ function ask_delete_line(obj, line, func_path){
           children.shift()
           for (let i = 0; i < children.length; i++){
             delete_node = Array.prototype.slice.call(children[i].children).pop()
-            delete_node.setAttribute('onclick', "ask_delete_line(this, " + i + ", " + func_path + ")");
+            delete_node.setAttribute('onclick', "ask_delete_line(this, " + i + ", '" + func_path + "')");
             delete_node.previousElementSibling.setAttribute('onclick', "edit_line(this, " + '"' + csv_path + '"' + ", " + i + ", " + '"' + edit_path + '"' + ")");
           }
         }else{

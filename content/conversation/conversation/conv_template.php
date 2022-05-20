@@ -20,7 +20,13 @@
   </header>
   <main class="--conv-message-container">
     <?php
-    show_conv("../../../data/conversation.csv", ["../../../data/admin/data.csv", "../../../data/administration/data.csv", "../../../data/etudiant/data.csv"]);
+    $admin_path = "../../../data/admin/data.csv";
+    $administration_path = "../../../data/administration/data.csv";
+    $etudiant1 = "../../../data/etudiant/choixEtudiantsParcours1.csv";
+    $etudiant2 = "../../../data/etudiant/choixEtudiantsParcours2.csv";
+    $etudiant3 = "../../../data/etudiant/choixEtudiantsParcours3.csv";
+    $array_path = [$admin_path, $administration_path, $etudiant1, $etudiant2, $etudiant3];
+    show_conv("../../../data/conversation.csv", $array_path);
      ?>
   </main>
   <footer class="--conv-footer">
