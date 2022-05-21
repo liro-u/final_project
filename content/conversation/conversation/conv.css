@@ -53,7 +53,7 @@ body{
 .--conv-message-container{
   overflow-y: scroll;
   height: calc(100vh - 129px);
-  margin-top: 58px;
+  margin-top: 5px;
   margin-bottom: 70px;
   color: #fff;
 }

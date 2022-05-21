@@ -152,3 +152,10 @@ function create_row(obj){
   new_line.innerHTML += "<td class='--grid-case' onclick='ask_delete_line(this, " + line + ", " + '"' + del_path + '"' + ")'><img class='--grid-icon' src='http://cdn.onlinewebfonts.com/svg/img_216917.png'></img></td>"
   last_line.parentNode.insertBefore(new_line, last_line)
 }
+
+function toggle_show(obj){
+  icon = obj.children.item(1);
+  icon.classList.toggle("--grid-icon-show");
+  var popup = obj.nextElementSibling;
+  popup.classList.toggle("--grid-hide");
+}
