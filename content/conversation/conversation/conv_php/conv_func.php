@@ -1,6 +1,14 @@
 <?php
 session_start();
 include "../../../function/csv.php";
+echo("<meta name='csv_path' content='../".$_GET['conv_path']."'>");
+$content = get_content_in_array($_GET['conv_info']);
+$index_list_pseudo = get_collum_by_name($_GET['conv_info'], "pseudo list");
+$pseudo_list = explode(" ", $content[1][$index_list_pseudo]);
+if (! in_array($_SESSION['pseudo'], $pseudo_list)){
+  header('Location: ../../../../index.php');
+  exit;
+}
 
 function create_info_text($info, $class = ""){
   echo("<div class='--conv-wrap-part-conv $class'>");
@@ -18,7 +26,7 @@ function create_message($content, $self = true, $pseudo = "profile picture", $pr
   }
   echo("<div class='--conv-wrap-part-conv $self_wrap_part_class'>");
   if ($self){
-    add_3_point();
+    add_3_point($self);
   }
   echo("<div class='--conv-wrap-message $self_message_class'>");
   if (! $self){
@@ -32,13 +40,28 @@ function create_message($content, $self = true, $pseudo = "profile picture", $pr
   }
   echo('</div>');
   if (! $self){
-    add_3_point();
+    add_3_point($self);
   }
   echo('</div>');
 }
 
-function add_3_point(){
+function add_3_point($self){
+  echo("<div class='--conv-popup' onclick='show_popup_button(this)'>");
   echo('<img class="--conv-message-button" src="https://cdn-icons-png.flaticon.com/512/64/64576.png" alt="option"></img>');
+  echo("<div class='--conv-popuptext");
+  if ($self){
+    echo(" --conv-self-popuptext");
+  }
+  echo("'><div class='--conv-popup'>");
+  if (! $self){
+    echo("<p class='--conv-button-popup-text'>bloquer</p>");
+    echo("<p class='--conv-button-popup-text'>signaler message </p>");
+  }else{
+    echo("<p class='--conv-button-popup-text'>supprimer</p>");
+    echo("<p class='--conv-button-popup-text'>modifier</p>");
+  }
+  echo("</div></div>");
+  echo("</div>");
 }
 
 function show_conv($conv_path, $csv_path_data_list){

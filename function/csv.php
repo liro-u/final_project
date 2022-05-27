@@ -138,4 +138,37 @@ function search_pseudo_line($csv_path, $pseudo){
   }
   return [];
 }
+
+function search_pseudo_line_key($csv_path, $pseudo){
+  $idx_pseudo = get_collum_by_name($csv_path, "pseudo");
+  $tab = get_content_in_array($csv_path);
+  foreach($tab as $k => $row){
+    if ($row[$idx_pseudo] == $pseudo){
+      return $k;
+    }
+  }
+  return [];
+}
+
+function get_pretty_time($date){
+  $time_dif = time() - $date;
+  if($time_dif < 30){
+    $pretty_date = "maintenant";
+  }elseif ($time_dif < 60){
+    $pretty_date = "il y a ".date('s', $time_dif)."s";
+  }elseif ($time_dif < 3600){
+    $pretty_date = "il y a ".intval(date('i', $time_dif))."min";
+  }elseif ($time_dif < 86400){
+    $pretty_date = "il y a ".date('G', $time_dif)."h";
+  }elseif ($time_dif < 172800){
+    $pretty_date = "hier";
+  }elseif ($time_dif < 604800){
+    $pretty_date = date('l', $date);
+  }elseif ($time_dif < 31536000){
+    $pretty_date = date('j F', $date);
+  }else{
+    $pretty_date = "il y a ".(date('Y', $time_dif) - 1970)." ans";
+  }
+  return $pretty_date;
+}
  ?>

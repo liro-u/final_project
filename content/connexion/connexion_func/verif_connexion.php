@@ -24,6 +24,8 @@ if ($line = search_in_file_at_same_line($csv_path_admin, [$post_password, $post_
     if ($temp_line = search_in_file_at_same_line($csv_path_etudiant, [$post_password, $post_login], ["password", "pseudo"])){
       $line = $temp_line;
       $_SESSION['type_user'] = "etudiant";
+      $_SESSION['moyenne'] = $line[get_collum_by_name($csv_path_etudiant, "Moyenne")];
+      $_SESSION['ECTS'] = $line[get_collum_by_name($csv_path_etudiant, "ECTS acquis")];
       create_basic_session($csv_path_etudiant, $line);
     }
   }

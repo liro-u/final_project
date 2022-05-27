@@ -25,7 +25,7 @@ function add_footer($list = [], $link = [], $logo = [], $logo_link = [], $main_l
 }
 
 function add_default_footer(){
-    add_footer(["politique de confidentialité", "Accord utilisateur", "Qui sommes-nous ?", "Contact", "Mes autres projets"],["","","","","https://liro-u.github.io/portfolio/"],["https://cytech.cyu.fr/images/logo.png", "https://www.cti-commission.fr/wp-content/uploads/2016/01/cti-logo-cmjn.png"],["", ""],"https://upload.wikimedia.org/wikipedia/commons/4/4a/CY_Tech.png","");
+    add_footer(["politique de confidentialité", "Contact", "Mes autres projets"],["https://www.cyu.fr/mentions-legales","","","https://cytech.cyu.fr/nous-contacter-1","https://liro-u.github.io/portfolio/"],["https://cytech.cyu.fr/images/logo.png", "https://www.cti-commission.fr/wp-content/uploads/2016/01/cti-logo-cmjn.png"],["https://www.cyu.fr/", "https://www.cti-commission.fr/"],"https://upload.wikimedia.org/wikipedia/commons/4/4a/CY_Tech.png","https://cytech.cyu.fr/");
 }
 
 //faire en sorte que le footer colle au bas de la page meme quand il n'y a rien dedans

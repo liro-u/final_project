@@ -1,0 +1,64 @@
+body{
+  background-color: cornflowerblue;
+  padding-top: 100px;
+}
+
+/* Popup container - can be anything you want */
+.--conv-popup {
+  position: relative;
+
+  cursor: pointer;
+
+
+
+}
+
+/* The actual popup */
+.--conv-popup .--conv-popuptext {
+  visibility: hidden;
+  width: max-content;
+  background-color: #4a4b56;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.--conv-popup .--conv-popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #4a4b56 transparent transparent transparent;
+}
+
+.--conv-button-popup-text:hover{
+  background-color: #888888;
+}
+
+.--conv-button-popup-text{
+  color: white;
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+
+}
+
+
+
+
+/* Toggle this class - hide and show the popup */
+.--conv-popup .show {
+  visibility: visible;
+}

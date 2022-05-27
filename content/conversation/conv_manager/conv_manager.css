@@ -1,0 +1,196 @@
+/*container*/
+.sidenav {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-right: solid;
+}
+
+.content {
+    width: 80%;
+    margin-left: 20%;
+}
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: .9370rem;
+    align-content: space-between;
+    vertical-align: middle;
+    border-bottom: 2px solid rgba(120,130,140);
+    font-family: Raleway, sans-serif;
+}
+
+/*return*/
+.c_m_return_link{
+  bottom: 20px;
+  position: fixed;
+}
+
+.c_m_return_img{
+  width: 28;
+  height: 28px;
+  filter: invert(1);
+  margin-left: 10px;
+  transform: scaleX(-1);
+}
+
+/*side content*/
+.tab_link{
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    color: white;
+}
+
+.tab_link:hover {
+    color: #777;
+    border-left: solid white 5px;
+}
+
+.plusIcon{
+    display: inline-block;
+}
+
+.plusIcon:hover{
+    color: #777;
+}
+
+.side_1{
+    margin: 20px 8px 6px 16px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.side_first{
+    display: inline-block;
+}
+
+/*preview*/
+.one_box{
+    border-bottom-color: #777;
+}
+
+.img_friend {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.text_box{
+    padding: 0px;
+    width: 100%;
+}
+
+.link{
+    text-decoration: none;
+}
+.link:hover .message_text{
+    color: rgb(0, 235, 39);
+}
+
+.link_wrap{
+    padding: .9370rem;
+}
+
+.name {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: Raleway, sans-serif;
+    color: black;
+}
+
+.message_text{
+    margin: 0px;
+    color: white;
+    display: block;
+    font-size: 25px;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-family: Raleway, sans-serif;
+    font-size: large;
+}
+
+.fa{
+    font-size:24px;
+    color: white;
+    cursor: pointer;
+}
+.plus_per:hover{
+    color: #777;
+}
+
+.time{
+    white-space: nowrap;
+}
+
+.icon{
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*popup*/
+
+.--conv-label{
+    display: block;
+    padding: 0 10px 0 10px;
+    border-radius: 20px;
+    color: white;
+}
+  
+.--conv-add-conv-popuptext, .--conv-add-grp-popuptext{
+    display: none;
+    z-index: 2;
+    background-color: rgba(34, 34, 34, 0.4);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+  
+.show {
+    display: block;
+}
+  
+.--conv-add-conv-text, .--conv-add-grp-text{
+    position: absolute;
+    background-color: #4c8ad5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    padding: 20px 0;
+    border-radius: 4px;
+}
+
+.--conv-form-text{
+    width: max-content;
+    margin: auto;
+}
+
+.--conv-input-text{
+    border-radius: 10px;
+    margin: 10px;
+    height: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.--conv-submit{
+    display: block;
+    margin: auto;
+}
+  

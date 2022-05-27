@@ -17,7 +17,7 @@
   <body>
     <header>
       <?php
-      add_menu_from_csv("data/".$_SESSION['type_user']."/menu.csv", "CY-Tech", "content/conversation/conversation/conv_template.php");
+      add_menu_from_csv("data/".$_SESSION['type_user']."/menu.csv", "CY-Tech");
       ?>
     </header>
     <main>

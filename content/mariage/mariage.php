@@ -61,6 +61,7 @@ function make_mariage($csv_path, $name_filiere, $save_mode = "add", $option_grou
   foreach ($option_name as $name => $place) {
   $option_preference[$name] = ["preference" => $sort_pseudo, "engaged_with" => [], "place_before_engaged" => $place];
   }
+  
 
   //get studdent preference
   $index_choix = [];
@@ -77,6 +78,7 @@ function make_mariage($csv_path, $name_filiere, $save_mode = "add", $option_grou
     }
     $studdent_prefference[$row[$index_pseudo]]["engaged_with"] = null;
   }
+
 
   //boucle while all studdent is engaged
   do{
@@ -149,7 +151,7 @@ function make_mariage($csv_path, $name_filiere, $save_mode = "add", $option_grou
       $line_nb++;
     }
     //put nb studdent / option
-    $option_group_content[1][$index_option] = $line_nb - $line_offset;
+    $option_group_content[1][$index_option] = $line_nb - $line_offset +1;
     //make all line with same number of collum
     $option_group_content = match_tab_row_size($option_group_content);
     foreach($option_group_content as $key => $value ){

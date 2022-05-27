@@ -5,7 +5,6 @@
   <link rel="stylesheet" href="../../../css/master.css">
   <link rel="stylesheet" href="conv.css">
   <?php
-  session_start();
   include "../../../content/connexion/verif_is_connected.php";
   include "conv_php/conv_func.php";
    ?>
@@ -14,8 +13,12 @@
 </head>
 <body>
   <header class="--conv-header">
-    <a class="--conv-link-return" href="../../../test.php"><img class="--conv-return" src="https://cdn-icons-png.flaticon.com/512/709/709586.png" alt="return"></img></a>
-    <p class="--conv-name-labbel">les bg de la campagne</p>
+    <a class="--conv-link-return" href="../conv_manager/conv_manager.php?state=conversation"><img class="--conv-return" src="https://cdn-icons-png.flaticon.com/512/709/709586.png" alt="return"></img></a>
+    <p class="--conv-name-labbel">
+    <?php
+      echo($_GET['name']);
+     ?>
+    </p>
     <img class="--conv-i-img" src="https://icon-library.com/images/information-icon-white/information-icon-white-6.jpg" alt="info_img"></img>
   </header>
   <main class="--conv-message-container">
@@ -26,7 +29,7 @@
     $etudiant2 = "../../../data/etudiant/choixEtudiantsParcours2.csv";
     $etudiant3 = "../../../data/etudiant/choixEtudiantsParcours3.csv";
     $array_path = [$admin_path, $administration_path, $etudiant1, $etudiant2, $etudiant3];
-    show_conv("../../../data/conversation.csv", $array_path);
+    show_conv($_GET['conv_path'], $array_path);
      ?>
   </main>
   <footer class="--conv-footer">
