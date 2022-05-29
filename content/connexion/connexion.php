@@ -22,7 +22,7 @@
                     <input type="password" name="password" class="login_input" placeholder="Password"/>
                 </div>
                 <div class="text-right">
-                    <a href="#">Forgot password?</a>
+                    <a href="../report/report.php">Mots de passe oublié?</a>
                 </div>
                 <button type="submit" class="button login_submit" value="Log In">
                     Log In

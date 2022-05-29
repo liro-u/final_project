@@ -73,6 +73,16 @@ function match_tab_row_size($tab){
   return $tab;
 }
 
+function is_in_witch_file($name, $research, $csv_path_list){
+  foreach($csv_path_list as $k => $csv_path){
+    $tab = get_content_in_array($csv_path);
+    if (exist_in_collum_name_array($name, $research, $csv_path, $tab)){
+      return $csv_path;
+    }
+  }
+  return "0";
+}
+
 function exist_in_collum_name($name, $research, $csv_path_list){
   foreach($csv_path_list as $k => $csv_path){
     $tab = get_content_in_array($csv_path);

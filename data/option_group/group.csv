@@ -1,28 +1,28 @@
 option;ACTU;HPDA;BI;CS;DS;FT;IAC;IAP;ICC;INEM;MMF;VISUA
-"nombre d'eleve";10;18;27;64;49;31;64;33;22;21;66;19;x
+"nombre d'eleve";10;18;27;64;49;31;64;33;21;22;66;19;x
 "moyenne de la moyenne";x;x;x;x;x;x;x;x;x;x;x;x;x
 "moyenne du dernier admis";x;x;x;x;x;x;x;x;x;x;x;x;x
-;Agnès.Blanchard;Luc.Dufour-Gallet;Denis-Adrien.Alves;Marthe.Seguin;Denis.de;Denis.Julien;Gabriel-Victor.Dupre;Monique.Mallet;Marc.Ribeiro;François.Herve;Hélène.Courtois;Pénélope.Ribeiro
-;Laurence.Meunier;Daniel.Mace-Carre;Marc.Guillou;Noël.Jacquet;Marguerite.Gauthier;Claire.Courtois;Susan.Sauvage;Gérard.Guerin;Joséphine.Humbert;Caroline.Marie;Charlotte.Le;Hugues.Morel
-;Thierry.Colin;Lucas.Rolland;Louis.Giraud;Charles.Lamy-Besson;Margaret.Chauvin;David.de;Michel.Levy;Étienne-Gilbert.Allard;Jérôme.Foucher;Georges.Bonnet;Laetitia.Rodrigues;François.de
-;Hugues.Raynaud;Élise.Mercier;Alphonse.Le;Jeannine.Lemaitre;Rémy.Berger;Gabrielle.Laine;Adélaïde.Boulay;Claire.Leclerc;daisy.Lopez;Zacharie.Bernard;Lucie.Lefebvre;Françoise.Chauveau
-;Antoine.Grenier;Michel.Renault;Lucas.Maillard;Alfred.Ramos;Joseph.Richard;Jean.Rodriguez;Marine.Hamel;Léon.du;Thibault.Faivre;Philippine.de;daisy.de;Éric.Le
-;David.Colas;Alexandre.Perret;William.du;Philippine.Normand;Jules.Tanguy;Margaux-Chantal.Roy;Benoît.Lenoir;Michèle.du;Célina.Cordier;Maurice.Alves;Léon.Allain;Anaïs.de
-;François.Colas;Simone-Gabrielle.Bonnet;Jeanne.Poulain;Isabelle.Dijoux;Marine.Alves-Buisson;Benoît-Nicolas.Loiseau;Pénélope.Marty;Laurence.Normand;Benjamin.Guillou;Yves.Roy-Perret;Virginie-Constance.Courtois;David.Lesage
-;Christiane.Le;Auguste.Clerc-Maillard;François.Thomas;Zacharie.Marchal;Manon.Sauvage;Charlotte.Ollivier;Corinne.Gros;Noémi.Evrard;Gabriel.du;Laurence.Bailly;Lucas.Morvan;Louis.Rousseau
-;Anouk.Le;Théodore.Nicolas;André.Bouvier;David.Louis;Thibaut.Turpin;Anne-Camille.Muller;Dominique.Gaillard;David.Godard-Clerc;Paulette.Leclercq;Pierre.Boyer;Simone.Ollivier;Augustin.Roche
-;;Alexandrie.Robin;Monique.Lecomte;Christelle.Lucas;Julie.Perret;Émile.Poulain;Benjamin.Masson;Andrée.Richard;Marcelle.Gauthier-Martineau;Renée.Maurice;Patricia.Guerin;Julie.Lesage
-;;Agathe.Le;Gérard.Dufour;Thibault-Charles.Blanc;Gilles.Leleu;Josette.Weber;Emmanuelle.Faure;Thierry.Faure;Zacharie.Weber;Adrien.Dumont;Alexandria.Delaunay;Brigitte.Le
-;;Anne.Pons;William.Andre;Raymond.Bonnet;Christiane.Gomes;Adélaïde.Carlier;Andrée.Rocher;Bernard.Chauvet;Philippe.Hamel;Chantal.Joubert;Antoine-Nicolas.Morel;Pierre.Mary
-;;Alphonse.Levy;Gabriel.Blanchet;Clémence.Leblanc;Théophile.Carre-Charles;Suzanne.Chauvet;Caroline.Bailly;Anastasie.Rocher;Franck.Le;Anouk-Pénélope.Ollivier;Inès.Costa;Michelle.Guibert
-;;André.Ramos;Frédérique.Maillot-Guyot;Noémi.Humbert-Barbe;Alphonse.Gomes;Dominique.Lecoq;Émile-Olivier.Legendre;Hugues.du;Margaud-Laure.Wagner;Olivie.Evrard;Franck.Bernard;Victor.Vasseur
-;;Daniel.Perrier;Daniel.Guillon;Étienne.de;Benjamin.Rocher;Joséphine.Hoareau;Gilbert.Marin;Jacques.Guibert;Diane.Martin;Antoine.Lefort-Letellier;Marine.Martel;Zacharie.Muller
-;;Laurence.Hebert;Philippe.De;Marie.Blanc;Colette.Peron;Robert.de;Juliette.Thibault;Daniel.Bernard;Paulette-Valérie.Albert;Hugues.Lesage;Sébastien.Chauvin;Andrée.Mendes
-;;Frédéric.Pages;Patrick.Morin;Luc.Ribeiro;Claude.De;Henri.Pasquier-Pierre;Denise-Alexandrie.Clement;Auguste.Picard;Julie.Fernandez;Zoé.Guibert-Huet;Alexandre.Garcia;Léon.Maillard
-;;;Christophe-Honoré.Mallet;Charlotte.du;Gilbert.Pottier-Lamy;Alexandrie.Sanchez;Hortense.Maillet;Susan.Benoit;Luce.Le;Augustin.Gauthier;Eugène.du;Élisabeth.Blondel
-;;;Océane.Gauthier;Hugues.Lemaire;Marianne-Alex.Carlier;Adrienne.Pinto;Jeanne.Le;Philippine-Maryse.Pruvost;Adrien-Xavier.Menard;Gabrielle.Vasseur;Claude.Benoit;
-;;;Alexandre.Lambert;Isaac.Riou;Adèle.Le;Thibaut.de;Suzanne.de;Élodie.Lopes;Gilbert.Deschamps;Marcel.Carlier;Dorothée.Pottier;
-;;;Capucine.Bertrand;Antoine.Etienne;Chantal-Alexandria.Riviere;Daniel.Mallet;Eugène.Dumas;Constance.du;Jules.Arnaud;;Stéphanie.du;
+;Agnès.Blanchard;Luc.Dufour-Gallet;Denis-Adrien.Alves;Marthe.Seguin;Denis.de;Denis.Julien;Gabriel-Victor.Dupre;Monique.Mallet;Joséphine.Humbert;Marc.Ribeiro;Hélène.Courtois;Pénélope.Ribeiro
+;Laurence.Meunier;Daniel.Mace-Carre;Marc.Guillou;Noël.Jacquet;Marguerite.Gauthier;Claire.Courtois;Susan.Sauvage;Gérard.Guerin;Jérôme.Foucher;François.Herve;Charlotte.Le;Hugues.Morel
+;Thierry.Colin;Lucas.Rolland;Louis.Giraud;Charles.Lamy-Besson;Margaret.Chauvin;David.de;Michel.Levy;Étienne-Gilbert.Allard;daisy.Lopez;Caroline.Marie;Laetitia.Rodrigues;François.de
+;Hugues.Raynaud;Élise.Mercier;Alphonse.Le;Jeannine.Lemaitre;Rémy.Berger;Gabrielle.Laine;Adélaïde.Boulay;Claire.Leclerc;Thibault.Faivre;Georges.Bonnet;Lucie.Lefebvre;Françoise.Chauveau
+;Antoine.Grenier;Michel.Renault;Lucas.Maillard;Alfred.Ramos;Joseph.Richard;Jean.Rodriguez;Marine.Hamel;Léon.du;Célina.Cordier;Zacharie.Bernard;daisy.de;Éric.Le
+;David.Colas;Alexandre.Perret;William.du;Philippine.Normand;Jules.Tanguy;Margaux-Chantal.Roy;Benoît.Lenoir;Michèle.du;Benjamin.Guillou;Philippine.de;Léon.Allain;Anaïs.de
+;François.Colas;Simone-Gabrielle.Bonnet;Jeanne.Poulain;Isabelle.Dijoux;Marine.Alves-Buisson;Benoît-Nicolas.Loiseau;Pénélope.Marty;Laurence.Normand;Gabriel.du;Maurice.Alves;Virginie-Constance.Courtois;David.Lesage
+;Christiane.Le;Auguste.Clerc-Maillard;François.Thomas;Zacharie.Marchal;Manon.Sauvage;Charlotte.Ollivier;Corinne.Gros;Noémi.Evrard;Paulette.Leclercq;Yves.Roy-Perret;Lucas.Morvan;Louis.Rousseau
+;Anouk.Le;Théodore.Nicolas;André.Bouvier;David.Louis;Thibaut.Turpin;Anne-Camille.Muller;Dominique.Gaillard;David.Godard-Clerc;Marcelle.Gauthier-Martineau;Laurence.Bailly;Simone.Ollivier;Augustin.Roche
+;;Alexandrie.Robin;Monique.Lecomte;Christelle.Lucas;Julie.Perret;Émile.Poulain;Benjamin.Masson;Andrée.Richard;Zacharie.Weber;Pierre.Boyer;Patricia.Guerin;Julie.Lesage
+;;Agathe.Le;Gérard.Dufour;Thibault-Charles.Blanc;Gilles.Leleu;Josette.Weber;Emmanuelle.Faure;Thierry.Faure;Philippe.Hamel;Renée.Maurice;Alexandria.Delaunay;Brigitte.Le
+;;Anne.Pons;William.Andre;Raymond.Bonnet;Christiane.Gomes;Adélaïde.Carlier;Andrée.Rocher;Bernard.Chauvet;Franck.Le;Adrien.Dumont;Antoine-Nicolas.Morel;Pierre.Mary
+;;Alphonse.Levy;Gabriel.Blanchet;Clémence.Leblanc;Théophile.Carre-Charles;Suzanne.Chauvet;Caroline.Bailly;Anastasie.Rocher;Margaud-Laure.Wagner;Chantal.Joubert;Inès.Costa;Michelle.Guibert
+;;André.Ramos;Frédérique.Maillot-Guyot;Noémi.Humbert-Barbe;Alphonse.Gomes;Dominique.Lecoq;Émile-Olivier.Legendre;Hugues.du;Diane.Martin;Anouk-Pénélope.Ollivier;Franck.Bernard;Victor.Vasseur
+;;Daniel.Perrier;Daniel.Guillon;Étienne.de;Benjamin.Rocher;Joséphine.Hoareau;Gilbert.Marin;Jacques.Guibert;Paulette-Valérie.Albert;Olivie.Evrard;Marine.Martel;Zacharie.Muller
+;;Laurence.Hebert;Philippe.De;Marie.Blanc;Colette.Peron;Robert.de;Juliette.Thibault;Daniel.Bernard;Julie.Fernandez;Antoine.Lefort-Letellier;Sébastien.Chauvin;Andrée.Mendes
+;;Frédéric.Pages;Patrick.Morin;Luc.Ribeiro;Claude.De;Henri.Pasquier-Pierre;Denise-Alexandrie.Clement;Auguste.Picard;Luce.Le;Hugues.Lesage;Alexandre.Garcia;Léon.Maillard
+;;;Christophe-Honoré.Mallet;Charlotte.du;Gilbert.Pottier-Lamy;Alexandrie.Sanchez;Hortense.Maillet;Susan.Benoit;Adrien-Xavier.Menard;Zoé.Guibert-Huet;Eugène.du;Élisabeth.Blondel
+;;;Océane.Gauthier;Hugues.Lemaire;Marianne-Alex.Carlier;Adrienne.Pinto;Jeanne.Le;Philippine-Maryse.Pruvost;Gilbert.Deschamps;Augustin.Gauthier;Claude.Benoit;
+;;;Alexandre.Lambert;Isaac.Riou;Adèle.Le;Thibaut.de;Suzanne.de;Élodie.Lopes;Jules.Arnaud;Gabrielle.Vasseur;Dorothée.Pottier;
+;;;Capucine.Bertrand;Antoine.Etienne;Chantal-Alexandria.Riviere;Daniel.Mallet;Eugène.Dumas;Constance.du;;Marcel.Carlier;Stéphanie.du;
 ;;;Thierry.Roux;Frédérique.Barre-Vallee;Benoît.Le;Olivie-Philippine.Diallo;Denise.Lebreton;Jeannine.Henry-Petitjean;;;François.Bernard;
 ;;;Alexandria.Charpentier;Michelle.Vidal;Emmanuelle.Vallee;Jérôme.Pichon;François.Leroux;Laure.Hoarau;;;Corinne.Humbert;
 ;;;Patricia.Didier;René.Gomez;Bertrand.Jacquot;Édouard.Nicolas;Lucas.Renault-Jean;Claude.Breton;;;Charlotte.Lelievre;

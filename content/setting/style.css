@@ -1,0 +1,106 @@
+body{
+  background: rgb(0,99,167);
+  background: linear-gradient(135deg, rgba(0,99,167,1) 7%, rgba(75,138,213,1) 100%);
+  background-repeat :no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+main{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+html{
+  width : 100%;
+  height : 100%;
+
+}
+
+table{
+  border-spacing: 20px;
+  font-size: 16px;
+
+
+}
+
+td{
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+
+}
+
+th{
+  font-size: 12px;
+  text-align: left;
+}
+
+.input{
+  border: 0px;
+  background: linear-gradient(135deg, rgba(0,99,167,1) 7%, rgba(75,138,213,1) 100%);
+  background-repeat :no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+select{
+  border: 0px;
+  background: rgb(0,99,167);
+  background: linear-gradient(135deg, rgba(0,99,167,1) 7%, rgba(75,138,213,1) 100%);
+  background-repeat :no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+.jour, .mois, .annees{
+  display: inline-block;
+  border: 1px white solid;
+  width : 25%;
+  height : 60px;
+}
+
+.button{
+  width: 25%;
+  height : 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 50px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  transition: color 0.2s ease-out;
+}
+
+.button:hover{
+  cursor: pointer;
+  color: rgb(170, 9, 105);
+}
+
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+@media (max-width: 354px){
+  .jour, .mois, .annees{
+    display: block;
+    margin:auto;
+  }
+
+  th ,td{
+    display: block;
+    text-align: center;
+  }
+  th {
+    padding-top: 8%;
+  }
+
+  body{
+    text-align: center;
+    justify-content: center;
+  }
+  table{
+    margin : auto;
+  }
+
+}

@@ -26,9 +26,9 @@ function add_menu($list = [], $link = [], $title="", $title_link = "", $message_
   echo "<h1>".$_SESSION['pseudo']."</h1>";
   echo "<img class='--nav_bar-wrap-profile-picture' src='".$_SESSION['profile_picture']."' alt='ici'></img>";  echo "<a href='#' class='modal_close'>&times;</a>";
   echo "<br>";
-  echo "<a class='--nav_bar-button' href='$pre_link"."content/settings/settings.php'>Gérer votre compte</a>";
+  echo "<a class='--nav_bar-button' href='$pre_link"."content/setting/settings.php'>Gérer votre compte</a>";
   if ($_SESSION['type_user'] == "etudiant"){
-    echo "<p class='nav_bar-info-text'>Ma moyenne : ".$_SESSION['moyenne']."</p>";
+    echo "<p class='nav_bar-info-text'>Ma moyenne : ".$_SESSION['moyenne']."</p><br>";
     echo "<p class='nav_bar-info-text'>Mes ECTS : ".$_SESSION['ECTS']."</p>";
   }
   echo "<a class='--nav_bar-button' href='$pre_link"."content/connexion/deconnexion.php'>Se déconnecter</a>";

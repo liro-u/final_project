@@ -1,0 +1,55 @@
+main{
+    color: #fff;
+    padding-bottom: 50px;
+}
+
+input{
+    border: 0px;
+    background: linear-gradient(135deg, rgba(0,99,167,1) 7%, rgba(75,138,213,1) 100%);
+    background-repeat :no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+.table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+table, td, th{
+    border: solid 2px #fff;
+    padding: 5px;
+    max-width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+h1, h4{
+    text-align: center;
+}
+
+.bouton{
+    width: 25%;
+    height : 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.bouton:hover{
+    cursor: pointer;
+}
+
+select:hover{
+    cursor: pointer;
+}

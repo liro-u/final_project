@@ -4,6 +4,7 @@
   height: 80vh;
   overflow: scroll;
   padding: 5px;
+  text-align: center;
 }
 
 .--grid-wrap-title{
@@ -23,6 +24,10 @@
 
 .--grid-wrap-title:hover > .--grid-icon-reduce{
   filter: invert(0.2);
+}
+
+.--grid-wrap-title:hover{
+  cursor: pointer;
 }
 
 .--grid-icon-reduce{
@@ -65,6 +70,7 @@
 
 .--grid-icon:hover{
   filter: invert(0);
+  cursor: pointer;
 }
 
 .--grid-case-no-border{
@@ -76,4 +82,24 @@
   color: #fff;
   width: calc(100% - 10px);
   background-color: rgba(0,0,0,0);
+}
+
+.--grid-input{
+  border: 0px;
+  border-bottom: solid 2px#fff;
+  background-color: #fff0;
+  color: white;
+}
+
+.--grid-button{
+  width: 25%;
+  height : 50px;
+  margin-top: 50px;
+  transition: color 0.2s ease-out;
+  margin-bottom: 150px;
+}
+
+.--grid-button:hover{
+  cursor: pointer;
+  color: rgb(170, 9, 105);
 }

@@ -159,3 +159,27 @@ function toggle_show(obj){
   var popup = obj.nextElementSibling;
   popup.classList.toggle("--grid-hide");
 }
+
+function notif_all(){
+  et1 = "../../data/etudiant/choixEtudiantsParcours1.csv";
+  et2 = "../../data/etudiant/choixEtudiantsParcours2.csv";
+  et3 = "../../data/etudiant/choixEtudiantsParcours3.csv";
+  notif(et1);
+  notif(et2);
+  notif(et3);
+}
+function notif(csv_path){
+  xhttp = new XMLHttpRequest()
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200){
+        console.log(this.responseText)
+        if (this.responseText == "1"){
+          alert("tout les élève ont bien été notifié");
+        }else{
+          alert("echec de l'operation");
+        }
+      }
+    }
+    xhttp.open("GET", "../../content/notif/notif_groupe.php?csv_path=" + csv_path, true)
+    xhttp.send()
+}

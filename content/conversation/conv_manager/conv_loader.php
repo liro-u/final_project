@@ -113,11 +113,11 @@ function load_conv($conv_path, $pre_link = "../../../", $type = "conv"){
 
 function create_preview($title = '', $content = '', $link = '', $img = '', $date = '', $type = "message", $conv_path = "", $type_conv = "conv"){
   echo ('<tr class="one_box">');
+  echo('<td>');
   if ($img != ""){
-    echo('<td>');
     echo("<img class='img_friend' src='$img' alt='' />");
-    echo("</td>");
   }
+  echo("</td>");
   echo("<td class='text_box'>");
   if ($link != ''){
     echo("<a class='link' href='$link'>");
@@ -134,11 +134,11 @@ function create_preview($title = '', $content = '', $link = '', $img = '', $date
     echo("</a>");
   }
   echo("</td>");
-  if ($type == 'message' and $_SESSION['type_user'] == "admin"){
-    echo("<td class='icon'>");
+  echo("<td class='icon'>");
+  if ($type_conv == 'conv' or ($_SESSION['type_user'] == "admin" and $type_conv == 'report')){
     echo("<i class='fa plus_per' onclick='ShowaddtoGroupe(".'"'.$conv_path.'"'.", ".'"'.$type_conv.'"'.")'>&#xf067;</i>");
-    echo("</td>");
   }
+  echo("</td>");
   if ($date != ""){
     $pretty_date = get_pretty_time($date);
     echo("<td class='time'>$pretty_date</td>");
