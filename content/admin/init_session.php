@@ -85,6 +85,8 @@ function init_session($csv_path, $csv_path_list, $profile_picture_path){
   $content_csv = $res[0];
   $res = setup_first_line_param($csv_path, "attributed option", $content_csv, 5);
   $content_csv = $res[0];
+  $res = setup_first_line_param($csv_path, "pseudo bloquee", $content_csv, 6);
+  $content_csv = $res[0];
 
 
   //fill tab with nothing to match them size

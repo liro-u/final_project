@@ -41,5 +41,6 @@ if ($line){
 
 function create_basic_session($csv_path, $line){
   $_SESSION['profile_picture'] = $line[get_collum_by_name($csv_path, "profile picture")];
+  $_SESSION['bloque'] = explode(" ", $line[get_collum_by_name($csv_path, "pseudo bloquee")]);
 }
 ?>

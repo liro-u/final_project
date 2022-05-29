@@ -9,7 +9,7 @@
   include "conv_php/conv_func.php";
    ?>
   <script src="conversation.js" defer></script>
-  <title>les bg de la campagne</title>
+  <title>conversation</title>
 </head>
 <body>
   <header class="--conv-header">

@@ -122,6 +122,8 @@ td, th {
     margin-left: 10px;
     font-family: Raleway, sans-serif;
     font-size: large;
+    max-height: 24px;
+    overflow-y: hidden;
 }
 
 .fa{

@@ -101,6 +101,15 @@ function get_random_row($csv_path){
   return $no_message_list[array_rand($no_message_list, 1)];
 }
 
+function get_random_row_exept_first($csv_path){
+  $no_message_list = get_content_in_array($csv_path);
+  array_shift($no_message_list);
+  if (count($no_message_list) != 0){
+    return $no_message_list[array_rand($no_message_list, 1)];
+  }
+  return [];
+}
+
 function search_in_file_at_same_line($csv_path, $param_list, $idx_name_list){
   foreach($idx_name_list as $k => $name){
     $idx_list[] = get_collum_by_name($csv_path, $name);
@@ -150,16 +159,20 @@ function search_pseudo_line_key($csv_path, $pseudo){
   return [];
 }
 
-function get_pretty_time($date){
+function get_pretty_time($date, $type = "all"){
   $time_dif = time() - $date;
-  if($time_dif < 30){
+  if($type == "all" and $time_dif < 30){
     $pretty_date = "maintenant";
-  }elseif ($time_dif < 60){
+  }elseif ($type == "all" and $time_dif < 60){
     $pretty_date = "il y a ".date('s', $time_dif)."s";
-  }elseif ($time_dif < 3600){
+  }elseif ($type == "all" and $time_dif < 3600){
     $pretty_date = "il y a ".intval(date('i', $time_dif))."min";
   }elseif ($time_dif < 86400){
-    $pretty_date = "il y a ".date('G', $time_dif)."h";
+    if ($type == "all"){
+      $pretty_date = "il y a ".date('G', $time_dif)."h";
+    }else{
+      $pretty_date = "aujourd'hui";
+    }
   }elseif ($time_dif < 172800){
     $pretty_date = "hier";
   }elseif ($time_dif < 604800){

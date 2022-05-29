@@ -52,7 +52,7 @@ function send_message(){
       }
     }
     list_data_path = JSON.stringify(["../../../../data/admin/data.csv", "../../../../data/administration/data.csv", "../../../../data/etudiant/choixEtudiantsParcours1.csv", "../../../../data/etudiant/choixEtudiantsParcours2.csv", "../../../../data/etudiant/choixEtudiantsParcours3.csv"])
-    xhttp.open("GET", "conv_php/send_message.php?conv=" + conv_data_path + "&date=" + Date.now() + "&content_type=" + content_type + "&content=" + new_message + "&csv_path_data_list=" + list_data_path, true)
+    xhttp.open("GET", "conv_php/send_message.php?conv=" + conv_data_path + "&content_type=" + content_type + "&content=" + new_message + "&csv_path_data_list=" + list_data_path, true)
     xhttp.send()
   }
 }
@@ -71,7 +71,9 @@ function create_message(content, self = true, content_type = "text", pseudo = "p
     self_message_class = "--conv-self-message"
   }
   new_message = "<div class='--conv-wrap-part-conv " + self_wrap_part_class + "'>"
+  d = new Date()
   if (self){
+    new_message += "<p class='--conv-date'>" + d.getHours() + ":" + d.getMinutes() + "</p>"
     new_message += add_3_point(self)
   }
   new_message += "<div class='--conv-wrap-message " + self_message_class + "'>"
@@ -87,6 +89,7 @@ function create_message(content, self = true, content_type = "text", pseudo = "p
   new_message += '</div>'
   if (! self){
     new_message += add_3_point(self)
+    new_message += "<p class='--conv-date'>" + d.getHours() + ":" + d.getMinutes() + "</p>"
   }
   new_message += '</div>'
   message_container.innerHTML += new_message
@@ -104,6 +107,23 @@ function show_popup_button(obj) {
   obj.children.item(0).classList.toggle("show");
 }
 
+function bloque(obj){
+  pseudo = obj.parentNode.parentNode.parentNode.parentNode.getElementsByClassName("--conv-message-pseudo")[0].innerHTML
+  xhttp = new XMLHttpRequest()
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200){
+      if (this.responseText == "1"){
+        alert("actualiser la page pour ne plus voir les messages de la personne bloqué");
+      }else{
+        alert("la personne n'a pas été bloqué veuillez réessayé")
+      }
+    }
+  }
+  list_data_path = JSON.stringify(["../../../../data/admin/data.csv", "../../../../data/administration/data.csv", "../../../../data/etudiant/choixEtudiantsParcours1.csv", "../../../../data/etudiant/choixEtudiantsParcours2.csv", "../../../../data/etudiant/choixEtudiantsParcours3.csv"])
+  xhttp.open("GET", "conv_php/bloque.php?pseudo=" + pseudo + "&data_path=" + list_data_path, true)
+  xhttp.send()
+}
+
 function add_3_point(self){
   wrap_3_point = "<div class='--conv-popup' onclick='show_popup_button(this)'>"
   wrap_3_point += '<img class="--conv-message-button" src="https://cdn-icons-png.flaticon.com/512/64/64576.png" alt="option"></img>'
@@ -113,13 +133,48 @@ function add_3_point(self){
   }
   wrap_3_point += "'><div class='--conv-popup'>"
   if (! self){
-    wrap_3_point += "<p class='--conv-button-popup-text'>bloquer</p>"
-    wrap_3_point += "<p class='--conv-button-popup-text'>signaler message </p>"
+    wrap_3_point += "<p class='--conv-button-popup-text' onclick='bloque(this)'>bloquer</p>"
+    wrap_3_point += "<p class='--conv-button-popup-text' onclick='signaler(this)'>signaler message </p>"
   }else{
-    wrap_3_point += "<p class='--conv-button-popup-text'>supprimer</p>"
+    wrap_3_point += "<p class='--conv-button-popup-text' onclick='delete_msg(this)'>supprimer</p>"
     wrap_3_point += "<p class='--conv-button-popup-text'>modifier</p>"
   }
   wrap_3_point += "</div></div>"
   wrap_3_point += "</div>"
   return wrap_3_point
+}
+
+function delete_msg(obj){
+  nb_msg = obj.parentNode.parentNode.parentNode.parentNode.getAttribute("nb_msg")
+  xhttp = new XMLHttpRequest()
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200){
+      if (this.responseText == "1"){
+        obj.parentNode.parentNode.parentNode.parentNode.getElementsByClassName("--conv-message")[0].innerHTML = "ce message a été supprimé"
+      }else{
+        alert("echec de la suppression du message")
+      }
+    }
+  }
+  xhttp.open("GET", "conv_php/delete.php?nb_msg=" + nb_msg + "&conv_path=" + getMeta('csv_path'), true)
+  xhttp.send()
+}
+
+function signaler(obj){
+  motif = prompt("entrer un motif de signalement")
+  nb_msg = obj.parentNode.parentNode.parentNode.parentNode.getAttribute('nb_msg')
+  xhttp = new XMLHttpRequest()
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200){
+      console.log(this.responseText);
+      if (this.responseText == "1"){
+        alert("ce message a bien été signalé\npour suivre votre requette rendez vous dans l'onglet admin de votre messagerie")
+      }else{
+        alert("echec de la prise en charge de ce signalement")
+      }
+    }
+  }
+  data_path_list = JSON.stringify(["../../../../data/admin/data.csv", "../../../../data/administration/data.csv", "../../../../data/etudiant/choixEtudiantsParcours1.csv", "../../../../data/etudiant/choixEtudiantsParcours2.csv", "../../../../data/etudiant/choixEtudiantsParcours3.csv"])
+  xhttp.open("GET", "conv_php/report_msg.php?nb_msg=" + nb_msg + "&conv_path=" + getMeta('csv_path') + "&motif=" + motif + "&data_list=" + data_path_list, true)
+  xhttp.send()
 }

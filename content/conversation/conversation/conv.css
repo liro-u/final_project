@@ -142,6 +142,17 @@ body{
   max-height: 400px;
 }
 
+.--conv-date{
+  display: none;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: black;
+}
+
+.--conv-wrap-part-conv:hover .--conv-date{
+  display: inline-block;
+}
+
 /*--FOOTER--*/
 .--conv-footer{
   background-color: rgba(163,188,212,1);

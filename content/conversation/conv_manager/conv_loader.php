@@ -16,7 +16,11 @@ function load_profile_conv($pre_link="../../../"){
     if ($target_folder == 'conv_link' or $target_folder == 'report_link'){
       foreach ($content as $key => $row) {
         $preview_exist = true;
-        load_conv("data/conversation/conv_info/".$row[0], $pre_link);
+        if ($target_folder == 'conv_link'){
+          load_conv("data/conversation/conv_info/".$row[0], $pre_link, "conv");
+        }elseif ($target_folder == 'report_link'){
+          load_conv("data/conversation/report_info/".$row[0], $pre_link, "report");
+        }
       }
     }elseif ($target_folder == 'notif_link'){
       $index_name = get_collum_by_name($total_path, "name");
@@ -42,7 +46,7 @@ function load_profile_conv($pre_link="../../../"){
   }
 }
 
-function load_conv($conv_path, $pre_link = "../../../"){
+function load_conv($conv_path, $pre_link = "../../../", $type = "conv"){
   $csv_path = $pre_link.$conv_path;
   $data_list = [$pre_link."data/etudiant/choixEtudiantsParcours1.csv", $pre_link."data/etudiant/choixEtudiantsParcours2.csv", $pre_link."data/etudiant/choixEtudiantsParcours3.csv", $pre_link."data/admin/data.csv", $pre_link."data/administration/data.csv"];
 
@@ -51,7 +55,14 @@ function load_conv($conv_path, $pre_link = "../../../"){
   $index_path_conv = get_collum_by_name($csv_path, "adress");
   $index_list_pseudo = get_collum_by_name($csv_path, "pseudo list");
   $conv_name = $content[1][$index_name];
-  $conv_adress = $pre_link."data/conversation/conv_data/".$content[1][$index_path_conv];
+  if ($type == "conv"){
+    $conv_adress = $pre_link."data/conversation/conv_data/".$content[1][$index_path_conv];
+    $conv_adress_f = "../../../data/conversation/conv_data/".$content[1][$index_path_conv];
+  }elseif ($type == "report"){
+    $conv_adress = $pre_link."data/conversation/report_data/".$content[1][$index_path_conv];
+    $conv_adress_f = "../../../data/conversation/report_data/".$content[1][$index_path_conv];
+
+  }
   $pseudo_list = explode(" ", $content[1][$index_list_pseudo]);
   $repr_pseudo = $pseudo_list[0];
   if (count($pseudo_list) > 1){
@@ -76,11 +87,15 @@ function load_conv($conv_path, $pre_link = "../../../"){
   $index_type_content = get_collum_by_name($conv_adress, "content_type");
   $index_content = get_collum_by_name($conv_adress, "content");
   $index_date = get_collum_by_name($conv_adress, "date");
-  $last_message = "vous n'avez pas de message dans cette conversation 😥";
+  if ($type == "report"){
+    $last_message = "Votre requette est prise en charge par nos équipes, merci d'être patient";
+  }else{
+    $last_message = "vous n'avez pas de message dans cette conversation 😥";
+  }
   $date = "";
   for($i = -1; $i > -count($conv_content); $i--){
     $line_index = count($conv_content) + $i;
-    if ($conv_content[$line_index][$index_type_content] == "text"){
+    if ($conv_content[$line_index][$index_type_content] == "text" or ($conv_content[$line_index][$index_type_content] == "report_info" and $_SESSION['type_user'] == 'admin')){
       $last_message = $conv_content[$line_index][$index_content];
       $date = $conv_content[$line_index][$index_date];
       break;
@@ -92,11 +107,11 @@ function load_conv($conv_path, $pre_link = "../../../"){
     }
   }
 
-  $conv_temp_address = $pre_link."content/conversation/conversation/conv_template.php?name=".$conv_name."&conv_path=../../../data/conversation/conv_data/".$content[1][$index_path_conv]."&conv_info=../../../".$conv_path;
-  create_preview($conv_name, $last_message, $conv_temp_address, $profile_picture, $date, "message", $conv_path);
+  $conv_temp_address = $pre_link."content/conversation/conversation/conv_template.php?name=".$conv_name."&conv_path=".$conv_adress_f."&conv_info=../../../".$conv_path;
+  create_preview($conv_name, $last_message, $conv_temp_address, $profile_picture, $date, "message", $conv_path, $type);
 }
 
-function create_preview($title = '', $content = '', $link = '', $img = '', $date = '', $type = "message", $conv_path = ""){
+function create_preview($title = '', $content = '', $link = '', $img = '', $date = '', $type = "message", $conv_path = "", $type_conv = "conv"){
   echo ('<tr class="one_box">');
   if ($img != ""){
     echo('<td>');
@@ -119,9 +134,9 @@ function create_preview($title = '', $content = '', $link = '', $img = '', $date
     echo("</a>");
   }
   echo("</td>");
-  if ($type == 'message'){
+  if ($type == 'message' and $_SESSION['type_user'] == "admin"){
     echo("<td class='icon'>");
-    echo("<i class='fa plus_per' onclick='ShowaddtoGroupe(".'"'.$conv_path.'"'.")'>&#xf067;</i>");
+    echo("<i class='fa plus_per' onclick='ShowaddtoGroupe(".'"'.$conv_path.'"'.", ".'"'.$type_conv.'"'.")'>&#xf067;</i>");
     echo("</td>");
   }
   if ($date != ""){
