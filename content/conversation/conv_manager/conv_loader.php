@@ -135,7 +135,7 @@ function create_preview($title = '', $content = '', $link = '', $img = '', $date
   }
   echo("</td>");
   echo("<td class='icon'>");
-  if ($type_conv == 'conv' or ($_SESSION['type_user'] == "admin" and $type_conv == 'report')){
+  if ($type != "info" and ($type_conv == 'conv' or ($_SESSION['type_user'] == "admin" and $type_conv == 'report'))){
     echo("<i class='fa plus_per' onclick='ShowaddtoGroupe(".'"'.$conv_path.'"'.", ".'"'.$type_conv.'"'.")'>&#xf067;</i>");
   }
   echo("</td>");

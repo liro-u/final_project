@@ -1,0 +1,4 @@
+login_sender;date;content_type;content;is_delete;delete_date
+;1653849870;join_info;"lirou a créer le groupe 'c'";;
+;1653849870;join_info;"lirou a ajouté admin au groupe";;
+lirou;1653849870;report_info;"le message ""bonjour"" a ete signalé par lirou le 29 May 2022 a 18:44<br>nb_msg = 3<br>conv_path = ../../../../data/conversation/conv_data/bg.csv<br>motif = c";;

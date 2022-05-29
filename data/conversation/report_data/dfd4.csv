@@ -1,0 +1,3 @@
+login_sender;date;content_type;content;is_delete;delete_date
+;1653849828;join_info;"lirou a créer le groupe 'dfd4'";;
+lirou;1653849828;report_info;"le message ""coucou"" a ete signalé par lirou le 29 May 2022 a 18:43<br>nb_msg = 26<br>conv_path = ../../../../data/conversation/conv_data/conversation.csv<br>motif = dfd4";;
