@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Connexion CY-Tech</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="project.css"/>
     <link rel="stylesheet" href="../../css/master.css"/>

@@ -25,7 +25,7 @@ function add_footer($list = [], $link = [], $logo = [], $logo_link = [], $main_l
 }
 
 function add_default_footer($pre_link=""){
-    add_footer(["politique de confidentialité", "Contact", "Mes autres projets", "reporter un problème"],["https://www.cyu.fr/mentions-legales","https://cytech.cyu.fr/nous-contacter-1","https://liro-u.github.io/portfolio/",$pre_link."content/report/report.php"],["https://cytech.cyu.fr/images/logo.png", "https://www.cti-commission.fr/wp-content/uploads/2016/01/cti-logo-cmjn.png"],["https://www.cyu.fr/", "https://www.cti-commission.fr/"],"https://upload.wikimedia.org/wikipedia/commons/4/4a/CY_Tech.png","https://cytech.cyu.fr/");
+    add_footer(["politique de confidentialité", "Contact", "Mes autres projets", "reporter un problème", "rapport"],["https://www.cyu.fr/mentions-legales","https://cytech.cyu.fr/nous-contacter-1","https://liro-u.github.io/portfolio/",$pre_link."content/report/report.php", "https://docs.google.com/document/d/1WKlTtXL8MJU0RUUASN0UWMqY_Kr0EZnYY8KmNR7HQfA/edit?usp=sharing"],["https://cytech.cyu.fr/images/logo.png", "https://www.cti-commission.fr/wp-content/uploads/2016/01/cti-logo-cmjn.png"],["https://www.cyu.fr/", "https://www.cti-commission.fr/"],"https://upload.wikimedia.org/wikipedia/commons/4/4a/CY_Tech.png","https://cytech.cyu.fr/");
 }
 
 //faire en sorte que le footer colle au bas de la page meme quand il n'y a rien dedans

@@ -78,17 +78,20 @@ if ($post_pseudo != "") {
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //changement de photo
-if (getimagesize($post_photo)) {
-  $ligne = search_pseudo_line_key($file, $_SESSION['pseudo']);
-  $content = get_content_in_array($file);
-  $index_profile_picture = get_collum_by_name($file, "profile picture");
-  $content[$ligne][$index_profile_picture] = $post_photo;
-  replace_csv_by_array($file, $content);
-  $_SESSION['profile_picture'] =  $post_photo;
-}else{
-  header("location:settings.php?error=wrong_link_pp");
-  exit;
+if ($post_photo != ""){
+  if (getimagesize($post_photo)) {
+    $ligne = search_pseudo_line_key($file, $_SESSION['pseudo']);
+    $content = get_content_in_array($file);
+    $index_profile_picture = get_collum_by_name($file, "profile picture");
+    $content[$ligne][$index_profile_picture] = $post_photo;
+    replace_csv_by_array($file, $content);
+    $_SESSION['profile_picture'] =  $post_photo;
+  }else{
+    header("location:settings.php?error=wrong_link_pp");
+    exit;
+  }
 }
+
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

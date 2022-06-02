@@ -1,6 +1,12 @@
 consigne projet
 http://ide.perso.eisti.fr/cours/DEVWEB/projet/2021-2022/projetRepartition.html##%20Probl%C3%A8me%20des%20mariages%20stables
 
+pour lancer le projet il faut faire un local host dans le fichier final_project et posséder les fonction php (https wraper, socket transport ssl)
+pour se connecter avec un etudiant il faut init les compte depuis un admin
+admin : (pseudo: admin, password: admin)
+administrateur : (pseudo: ad, password: ad)
+
+
 whimsical
 https://whimsical.com/final-project-WU55322ieJ17qQ9xbtGnm9
 

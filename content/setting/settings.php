@@ -12,7 +12,7 @@
     <link href="../../css/master.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 
-    <title></title>
+    <title>Settings</title>
   </head>
   <body>
   <header>

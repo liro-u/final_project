@@ -12,7 +12,7 @@
   include "../footer/footer.php";
   include "../nav_bar/nav_bar.php";
    ?>
-  <title>Document</title>
+  <title>Editeur De Fichier</title>
 </head>
 <body>
 <header>

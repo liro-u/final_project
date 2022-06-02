@@ -15,8 +15,14 @@ main{
   padding-bottom: 2vh;
   color: white;
   font-size: x-large;
+  text-align: center;
 }
 
+.gif{
+  margin-left: 30%;
+  margin-right: 30%;
+  width: 40%;
+}
 @media (max-aspect-ratio: 1/1){
   .div_exemple{
     font-size: large;

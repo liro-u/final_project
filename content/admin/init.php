@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>test</title>
+    <title>initialiser les comptes</title>
       <?php
       session_start();
       include "../../content/connexion/verif_is_connected.php";

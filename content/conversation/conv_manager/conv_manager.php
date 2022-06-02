@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Conv Manager</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../../../css/master.css"/>
     <link rel="stylesheet" type="text/css" href="conv_manager.css"/>

@@ -2,8 +2,8 @@
 <html data-scroll="0" lang="fr">
   <head>
     <meta charset="utf-8">
-    <title>test</title>
-    <?php
+    <title>Acceuil</title>
+    <?php 
     session_start();
     include "content/connexion/verif_is_connected.php";
     verif_can_access();
@@ -22,31 +22,41 @@
     </header>
     <main>
       <div class="div_exemple">
-        <h1>exemple title for demo</h1>
-        <p> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-      </div>
-      <div class="div_exemple">
-        <h2>other title exemple</h1>
-        <p> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-      </div><div class="div_exemple">
-        <h1>exemple title for demo</h1>
-        <p> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-      </div>
-      <div class="div_exemple">
-        <h2>other title exemple</h1>
-        <p> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-      </div>
-    </main>
+        <?php
+        if ($_SESSION['type_user'] == "administration") {
+       
+          echo " <h1>Bienvenue ".$_SESSION['pseudo']."</h1> ";
+          echo "<p> Bienvenue sur la page d'admin.
+          Ici vous pouvez initialisez lancer la répartition des élèves dans leur futur filières et accéder à la liste des étudiants dans l'onglet fichier ! fin administration
+          </p>";
+ 
+        }
+ 
+        if ($_SESSION['type_user'] == "etudiant") {
+          echo " <h1>Bienvenue ".$_SESSION['pseudo']."</h1> ";
+          echo "<p> L'equipe cy-tech vous informe qu'ici vous pourrez choisir vos voeux de filière.
+          Pour cela cliquez sur choisir mes options et suivez la procédure
+          <br> Remplissez votre profil !
+          <br>Vous pouvez chosir photo de profils, date de naissance etc !! Fin étudiants
+          </p>";
+        }
+ 
+        if ($_SESSION['type_user'] == "admin") {
+ 
+          echo " <h1>Bienvenue ".$_SESSION['pseudo']."</h1> ";
+         echo "<p> Bienvenue sur la page administrateur.
+         Ici vous pouvez attribuer des mots de passe à chaque étudiants
+         Vous pouvez aussi acceder à la liste des étudiants ainsi qu'à celle de l'admistrations.
+         Gérer les conversations !
+         En cas d'alerte vous pouvez résoudre les problèmes en supprimant certains messages
+          </p>";
+        }
 
-    <?php
+      echo "</div>";
+      echo "<img class='gif' src='https://media.giphy.com/media/dZXzmKGKNiJtDxuwGg/giphy.gif'>";
+    echo"</main>";
     add_default_footer();
      ?>
-
+ 
   </body>
 </html>

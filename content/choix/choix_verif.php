@@ -10,7 +10,7 @@ if ($_SESSION["otpion"] != "MF"){
     $post_select4 = $_POST["select4"];
     $post_select5 = $_POST["select5"];
     $post_select6 = $_POST["select6"];
-    array_push($liste, [$post_select3, $post_select4, $post_select5, $post_select6]);
+    array_push($liste, $post_select3, $post_select4, $post_select5, $post_select6);
     if($_SESSION["otpion"] != "MI"){
         $post_select7 = $_POST["select7"];
         $post_select8 = $_POST["select8"];

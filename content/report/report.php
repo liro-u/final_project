@@ -16,7 +16,7 @@
     <input class="text_input input" type="text" required name="motif">
     <h1>Entrer un descriptif</h1>
     <textarea cols="40" rows="15" placeholder="je fait un report pour le motif suivant ... " name="description" required></textarea>
-    <a href="../../../index.php">
+    <a href="../../index.php">
     <input type="button" value="Annuler" class='button input'> </a>
     <input type="submit" value="Envoyer" class="button input">
     </from>
